@@ -1,5 +1,5 @@
 regions: [eu-west-1]
-stacks: [ophan]
+stacks: [playground]
 
 templates:
     gender-analysis:
@@ -18,7 +18,7 @@ deployments:
     template: gender-analysis
     actions: [uploadLambda]
   gender-analysis-cfn:
-    contentDirectory: gender-analysis-cloudformation
+    contentDirectory: gender-analysis
     type: cloud-formation
     app: gender-analysis
     parameters:
