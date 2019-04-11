@@ -18,13 +18,13 @@ deployments:
     template: gender-analysis
     actions: [uploadLambda]
   gender-analysis-cfn:
-    contentDirectory: gender-analysis
+    contentDirectory: gender-analysis-cloudformation
     type: cloud-formation
     app: gender-analysis
     parameters:
       prependStackToCloudFormationStackName: false
       cloudFormationStackName: gender-analysis
-      templatePath: cfn.yaml
+      templatePath: cloud-formation/cfn.yaml
     dependencies: [gender-analysis-lambda-upload]
   gender-analysis-lambda-update:
     template: gender-analysis
