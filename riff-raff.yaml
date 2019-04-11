@@ -24,7 +24,7 @@ deployments:
     parameters:
       prependStackToCloudFormationStackName: false
       cloudFormationStackName: gender-analysis
-      templatePath: cfn.yaml
+      templatePath: cloudformation/cfn.yaml
     dependencies: [gender-analysis-lambda-upload]
   gender-analysis-lambda-update:
     template: gender-analysis
