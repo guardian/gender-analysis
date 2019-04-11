@@ -15,14 +15,12 @@ const getNamesForPath = (name) =>
 exports.handler = async (event) => {
   let body = JSON.parse(event.body);
   let res =  await getNamesForPath(body.name);
-  let response = {
+  return {
     statusCode: 200,
     headers: {
       "x-custom-header" : "my custom header value"
     },
-    body: JSON.stringify(res)
+    body: JSON.stringify({ people: JSON.stringify(res) })
   };
-  return response;
 };
 
-console.log(getNamesForPath("Jonny Rankin"))
