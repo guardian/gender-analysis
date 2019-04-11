@@ -7,7 +7,7 @@ templates:
       app: gender-analysis
       contentDirectory: gender-analysis
       parameters:
-        bucket: ophan-dist
+        bucket: gender-analysis-dist
         functionNames: [gender-analysis-]
         fileName: gender-analysis.zip
         prefixStack: false
