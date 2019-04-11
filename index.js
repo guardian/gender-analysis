@@ -20,7 +20,7 @@ exports.handler = async (event) => {
     headers: {
       "x-custom-header" : "my custom header value"
     },
-    body: JSON.stringify({ people: JSON.stringify(res) })
+    body: JSON.stringify({ people: res })
   };
 };
 
