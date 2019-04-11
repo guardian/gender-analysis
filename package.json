@@ -29,5 +29,5 @@
     "uuid": "^3.2.1"
   },
   "riffraffFile": "./riff-raff.yaml",
-  "cloudformation": "./cfn.yaml"
+  "cloudformation": "cloudformation/cfn.yaml"
 }
