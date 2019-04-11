@@ -18,7 +18,7 @@ deployments:
     template: gender-analysis
     actions: [uploadLambda]
   gender-analysis-cfn:
-    contentDirectory: gender-analysis-cloudformation
+    contentDirectory: gender-analysis-cloudformation-2
     type: cloud-formation
     app: gender-analysis
     parameters:
