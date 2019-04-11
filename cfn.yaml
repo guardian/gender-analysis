@@ -150,25 +150,6 @@ Resources:
       - GenderAnalysisApi
       - GenderAnalysisApiDeployment
 
-  GenderAnalysisStageProd:
-    Type: AWS::ApiGateway::Stage
-    Properties:
-      StageName: !Ref Stage
-      Description: Prod Stage
-      RestApiId: !Ref GenderAnalysisApi
-      DeploymentId: !Ref GenderAnalysisApiDeployment
-      Variables:
-        Stack: !Ref Stack
-      MethodSettings:
-        - ResourcePath: /getGender
-          HttpMethod: POST
-          MetricsEnabled: 'true'
-          DataTraceEnabled: 'true'
-          ThrottlingBurstLimit: '999'
-    DependsOn:
-      - GenderAnalysisApi
-      - GenderAnalysisApiDeployment
-
   GenderAnalysisLambdaInvokePermission:
     Type: AWS::Lambda::Permission
     Properties:
