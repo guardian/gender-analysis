@@ -105,7 +105,7 @@ Resources:
     Properties:
       RestApiId: !Ref GenderAnalysisApi
       ParentId: !GetAtt [GenderAnalysisApi, RootResourceId]
-      PathPart: getEntities
+      PathPart: getGenderAnalysis
     DependsOn: GenderAnalysisApi
 
   GenderAnalysisApiMethod:
