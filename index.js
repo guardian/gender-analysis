@@ -24,3 +24,5 @@ exports.handler = async (event) => {
   };
   return response;
 };
+
+console.log(getNamesForPath("Jonny Rankin"))
